@@ -1,0 +1,25 @@
+{
+  "name": "selfbot",
+  "version": "2.0.0",
+  "description": "Selfbot made by Vectrixed",
+  "main": "Vism.js",
+  "dependencies": {
+    "discord.js": "^10.0.1",
+    "fs": "^0.0.1-security",
+    "google-search": "^0.0.4",
+    "google-translate-api": "^2.2.2",
+    "urban": "^0.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "pm2 start Vism.js --name selfbot --watch",
+    "stop": "pm2 stop selfbot && pm2 delete selfbot"
+  },
+  "keywords": [
+    "Vism",
+    "vectrixed",
+    "Silvano"
+  ],
+  "author": "Vectrixed",
+  "license": "ISC"
+}
