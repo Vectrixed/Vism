@@ -1,4 +1,4 @@
-//Defining vars START
+ //Defining vars START
 var Discord = require('discord.js');
 		Client = new Discord.Client(),
   	config = require('./config.json'),
@@ -28,7 +28,7 @@ Client.on('ready', () => {
 
 //ADDING COMMANDS PART START
 f.addCmd("help", (a,b, msg)=> {
-	f.cmds(msg);
+	f.lcmd(msg);
 }, `Lists all the commands.`)
 
 f.addCmd("eval",(command, args, message)=>{
