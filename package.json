@@ -1,6 +1,6 @@
 {
   "name": "selfbot",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Selfbot made by Vectrixed",
   "main": "Vism.js",
   "dependencies": {

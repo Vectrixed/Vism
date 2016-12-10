@@ -1,4 +1,4 @@
-function addCmd(name, func, desc) {
+function addCmd(name, desc, func) {
     cmds.push([name, func, desc])
 }
 function log(arg) {
@@ -31,9 +31,21 @@ function listcmds(msg){
 function isNumeric(num){
     return !isNaN(num)
 }
+function getuptime(uptime, msg){
+  x = uptime / 1000
+  seconds = Math.floor(x % 60)
+  x /= 60
+  minutes = Math.floor(x % 60)
+  x /= 60
+  hours = Math.floor(x % 24)
+  x /= 24
+  days = Math.floor(x)
+  msg.channel.sendMessage(`\`Bot has been on for: ${days} days, ${hours} hours, ${minutes} minutes and ${seconds} seconds.\``)
+}
 exports.addCmd = addCmd;
 exports.log = log;
 exports.translate = t;
 exports.eval = eval2;
 exports.lcmd = listcmds;
 exports.isNum = isNumeric;
+exports.uptime = getuptime;
