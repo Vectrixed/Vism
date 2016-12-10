@@ -26,7 +26,7 @@ function listcmds(msg){
   cmdlist.push([`${cmds[i][0]}: ${cmds[i][2]}\n`])
   }
   let cmdslist2 = cmdlist.join("\n")
-  msg.channel.sendMessage(`\`\`\`\n${cmdslist2}\n\`\`\``)
+  msg.channel.sendMessage(`\`\`\`\n${cmdslist2}\n\`\`\`\nSelfbot's github: https://github.com/vectrixed/Vism`)
 }
 function isNumeric(num){
     return !isNaN(num)

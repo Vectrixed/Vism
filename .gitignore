@@ -4,3 +4,4 @@ config.json
 rstart.bat
 rstop.bat
 cmd
+npm-debug.log
