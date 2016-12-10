@@ -5,3 +5,4 @@ rstart.bat
 rstop.bat
 cmd
 npm-debug.log
+update.bat
