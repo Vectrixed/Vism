@@ -2,7 +2,7 @@
 var Discord = require('discord.js');
 		Client = new Discord.Client(),
   	config = require('./config.json'),
-		cmds = [],
+		cmds = [], 
 		atr = [
 			["acow", "https://gyazo.com/c8b1e9298be58f164a9e2445d584ecf9"],
 			["dbad","https://gyazo.com/ac368304fb2cb65bb9ced110d147f2dd"],
@@ -24,9 +24,6 @@ Client.on('ready', () => {
   Client.user.setStatus("dnd");
 });
 //Defining vars END
-
-<<<<<<< HEAD
-=======
 
 //ADDING COMMANDS PART START
 f.addCmd("help", `Lists all of the commands.`, '', (a,b, msg)=> {
