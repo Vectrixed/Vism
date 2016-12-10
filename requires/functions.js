@@ -1,5 +1,5 @@
-function addCmd(name, desc, func) {
-    cmds.push([name, func, desc])
+function addCmd(name, desc, alias, func) {
+    cmds.push([name, func, desc, alias])
 }
 function log(arg) {
   console.log(arg)

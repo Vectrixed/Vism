@@ -27,15 +27,15 @@ Client.on('ready', () => {
 
 
 //ADDING COMMANDS PART START
-f.addCmd("help", `Lists all of the commands.`, (a,b, msg)=> {
+f.addCmd("help", `Lists all of the commands.`, '', (a,b, msg)=> {
 	f.lcmd(msg);
 })
 
-f.addCmd("eval", `Evals javascript. \n Usage: ${prefix}eval [js]`, (command, args, message)=>{
+f.addCmd("eval", `Evals javascript. \n Usage: ${prefix}eval [js]`, '', (command, args, message)=>{
   f.eval(message, command = prefix+command);
 })
 
-f.addCmd("translate", `Uses google translate to translate.\n Usage: ${prefix}translate [from] [to] [args]`, (cmd, args, msg)=>{
+f.addCmd("translate", `Uses google translate to translate.\n Usage: ${prefix}translate [from] [to] [args]`, '', (cmd, args, msg)=>{
   let from1 = args[0];
   let to1 = args[1];
   let transl8 = args.slice(2);
@@ -43,7 +43,7 @@ f.addCmd("translate", `Uses google translate to translate.\n Usage: ${prefix}tra
   f.translate(trans, from1, to1, msg);
 })
 
-f.addCmd("rule", `Lists the rules of le internet: \n Usage: ${prefix}rule [n],[random, rnd, rdm]`, (cmd, args, msg)=> {
+f.addCmd("rule", `Lists the rules of le internet: \n Usage: ${prefix}rule [n],[random, rnd, rdm]`, '', (cmd, args, msg)=> {
 	let rule = args[0];
 	if(f.isNum(rule)){
 	msg.edit(`\`\`\`\nRule ${rule}. ${rules[rule]}\n\`\`\``);
@@ -53,7 +53,7 @@ f.addCmd("rule", `Lists the rules of le internet: \n Usage: ${prefix}rule [n],[r
 }
 })
 
-f.addCmd("urban", `searches the urban dictionary for anything. \n Usage: ${prefix}urban [args]`, (cmd, args, msg)=> {
+f.addCmd("urban", `searches the urban dictionary for anything. \n Usage: ${prefix}urban [args]`, '', (cmd, args, msg)=> {
 	urban(args.join(' ')).first(function(json){
 if (json){
     msg.edit(`**${json.word}**\n\`\`\`${json.definition}\`\`\` \n${json.example} \n${json.permalink}`)
@@ -63,7 +63,7 @@ if (json){
 })
 })
 
-f.addCmd("uptime", `shows uptime, lol what did you expect?`,(cmd, args, msg) => {
+f.addCmd("uptime", `shows uptime, lol what did you expect?`, '',(cmd, args, msg) => {
 	f.uptime(Client.uptime, msg);
 })
 //ADDING COMMANDS PART END
