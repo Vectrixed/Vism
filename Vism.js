@@ -86,7 +86,6 @@ if (message.author.id !== "185088391384137730") return;
 	}
 });
 //Message event listener END
->>>>>>> 3bb5a40bdaefc5ca442121d70ce36b8d87a9269f
 
 //ADDING COMMANDS PART START
 f.addCmd("help", `Lists all of the commands.`, (a,b, msg)=> {
