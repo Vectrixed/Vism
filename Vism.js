@@ -1,26 +1,35 @@
  //Defining vars START
 var Discord = require('discord.js');
-		Client = new Discord.Client(),
-  	config = require('./config.json'),
-		cmds = [],
-		atr = [
-			["acow", "https://gyazo.com/c8b1e9298be58f164a9e2445d584ecf9"],
-			["dbad","https://gyazo.com/ac368304fb2cb65bb9ced110d147f2dd"],
-			["sheli", "https://www.youtube.com/watch?v=WPMDCJrRpT8"],
-			["y-you too", "https://www.youtube.com/watch?v=twkGJY_JxLE"],
-			["angery", "https://gyazo.com/76a38abe1b67e14ab8428aa41364235b"],
-			['kk', 'https://gyazo.com/60dc3b513937fae28b02fc9040175fe7' ]
-			],
-  	token = config.token,
-  	prefix = config.prefix,
-  	f = require('./requires/functions.js'),
-  	translate = require('google-translate-api'),
-		rules = require('./requires/intrules.json'),
-		urban = require('urban'),
-		d = new Date();
+	Client = new Discord.Client(),
+  config = require('./config.json'),
+	cmds = [],
+	atr = [
+		["acow", "https://gyazo.com/c8b1e9298be58f164a9e2445d584ecf9"],
+		["dbad","https://gyazo.com/ac368304fb2cb65bb9ced110d147f2dd"],
+		["sheli", "https://www.youtube.com/watch?v=WPMDCJrRpT8"],
+		["y-you too", "https://www.youtube.com/watch?v=twkGJY_JxLE"],
+		["angery", "https://gyazo.com/76a38abe1b67e14ab8428aa41364235b"],
+		['kk', 'https://gyazo.com/60dc3b513937fae28b02fc9040175fe7' ]
+		],
+  token = config.token,
+  prefix = config.prefix,
+  f = require('./requires/functions.js'),
+  translate = require('google-translate-api'),
+	rules = require('./requires/intrules.json'),
+	urban = require('urban'),
+	d = new Date();
+	var weekday = new Array(7);
+	weekday[0]=  "Sunday";
+	weekday[1] = "Monday";
+	weekday[2] = "Tuesday";
+	weekday[3] = "Wednesday";
+	weekday[4] = "Thursday";
+	weekday[5] = "Friday";
+	weekday[6] = "Saturday";
+
 
 Client.on('ready', () => {
-  console.log(`[${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}] ${Client.user.username} is ready.`);
+  console.log(`[${weekday[d.getDay()]} at ${d.getHours()+1}:${d.getMinutes()}:${d.getSeconds()}] ${Client.user.username} is ready.`);
   Client.user.setStatus("dnd");
 });
 //Defining vars END

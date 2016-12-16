@@ -1,13 +1,14 @@
 {
   "name": "selfbot",
-  "version": "2.0.1",
+  "version": "0.0.0",
   "description": "Selfbot made by Vectrixed",
   "main": "Vism.js",
   "dependencies": {
-    "discord.js": "^10.0.1",
+    "discord.js": "github:hydrabolt/discord.js#indev",
     "fs": "^0.0.1-security",
     "google-search": "^0.0.4",
     "google-translate-api": "^2.2.2",
+    "roblox-js": "^2.2.4",
     "urban": "^0.3.1"
   },
   "devDependencies": {},
@@ -21,5 +22,13 @@
     "Silvano"
   ],
   "author": "Vectrixed",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vectrixed/Vism.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Vectrixed/Vism/issues"
+  },
+  "homepage": "https://github.com/Vectrixed/Vism#readme"
 }
