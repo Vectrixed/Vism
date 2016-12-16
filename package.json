@@ -9,6 +9,7 @@
     "google-search": "^0.0.4",
     "google-translate-api": "^2.2.2",
     "roblox-js": "^2.2.4",
+    "runescape-api": "^1.0.9",
     "urban": "^0.3.1"
   },
   "devDependencies": {},

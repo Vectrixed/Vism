@@ -26,6 +26,7 @@ var Discord = require('discord.js');
 	weekday[4] = "Thursday";
 	weekday[5] = "Friday";
 	weekday[6] = "Saturday";
+	rbx = require('roblox-js');
 
 
 Client.on('ready', () => {
@@ -40,7 +41,7 @@ f.addCmd("help", `Lists all of the commands.`, (a,b, msg)=> {
 	f.lcmd(msg);
 })
 
-f.addCmd("eval", `Evals javascript. \n Usage: ${prefix}eval [js]`, (command, args, message)=>{
+f.addCmd("ev", `Evals javascript. \n Usage: ${prefix}eval [js]`, (command, args, message)=>{
   f.eval(message, command = prefix+command);
 })
 
