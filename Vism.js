@@ -76,6 +76,10 @@ if (json){
 f.addCmd("uptime", `shows uptime, lol what did you expect?`,(cmd, args, msg) => {
 	f.uptime(Client.uptime, msg);
 })
+
+f.addCmd("block", `blocks a user. \nUsage: ${prefix}block [user]`, (cmd, args, msg)=>{
+msg.mentions.users.every(u => u.block());
+})
 //ADDING COMMANDS PART END
 
 
@@ -91,7 +95,7 @@ if (message.author.id !== "185088391384137730") return;
 	}
 
   for(var i = 0; i < cmds.length; i++){
-		if(message.content.startsWith(prefix+cmds[i][0])){
+		if(message.content.split(" ")[0] === prefix+cmds[i][0]){
 	 	cmds[i][1](command, args, message);
 		}
 	}
