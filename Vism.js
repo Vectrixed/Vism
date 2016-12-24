@@ -1,5 +1,5 @@
  //Defining vars START
-var Discord = require('discord.js');
+  Discord = require('discord.js');
 	Client = new Discord.Client(),
   config = require('./config.json'),
 	cmds = [],
@@ -79,6 +79,10 @@ f.addCmd("uptime", `shows uptime, lol what did you expect?`,(cmd, args, msg) => 
 
 f.addCmd("block", `blocks a user. \nUsage: ${prefix}block [user]`, (cmd, args, msg)=>{
 msg.mentions.users.every(u => u.block());
+})
+
+f.addCmd("unblock", `unblocks a user. \nUsage: ${prefix}unblock [user]`, (cmd, args, msg)=>{
+msg.mentions.users.every(u => u.unblock());
 })
 //ADDING COMMANDS PART END
 
