@@ -4,7 +4,7 @@
   "description": "Selfbot made by Vectrixed",
   "main": "Vism.js",
   "dependencies": {
-    "discord.js": "github:hydrabolt/discord.js#indev",
+    "discord.js": "github:hydrabolt/discord.js",
     "fs": "^0.0.1-security",
     "google-search": "^0.0.4",
     "google-translate-api": "^2.2.2",

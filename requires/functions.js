@@ -11,13 +11,13 @@ function t(trans, from, to, msg){
    console.error(err);
   });
 }
-function eval2(message, command){
+function eval2(m, command){
   try{
   var msg = (command).length;
-  var X = eval(message.content.slice(msg));
-  message.edit(`${message.content}\n\`\`\`js\n${X}\n\`\`\``).catch(console.error);
+  var X = eval(m.content.slice(msg));
+  m.edit(`${m.content}\n\`\`\`js\n${X}\n\`\`\``).catch(console.error);
   }catch(e){
-  message.edit(`${message.content}\n\`\`\`js\n${e}\n\`\`\``).catch(console.error);
+  m.edit(`${m.content}\n\`\`\`js\n${e}\n\`\`\``).catch(console.error);
   }
 }
 function listcmds(msg){
@@ -45,6 +45,16 @@ function gettime(ms){
 function getuptime(uptime, msg){
   msg.channel.sendCode(`js`,`Bot has been on for: ${gettime(uptime)}.`)
 }
+function prune(client, msg, params){
+  let limit = parseInt(params[0]) ? parseInt(params[0]) + 1 : 2;
+  if(limit >= 100) limit = 100;
+  msg.channel.fetchMessages({ limit }).then(messages => {
+  messages.forEach(message => {
+  if(message.author !== client.user) return;
+    message.delete().catch(console.error);
+  });
+  }).catch(console.error);
+}
 exports.addCmd = addCmd;
 exports.log = log;
 exports.translate = t;
@@ -53,3 +63,4 @@ exports.lcmd = listcmds;
 exports.isNum = isNumeric;
 exports.uptime = getuptime;
 exports.gettime = gettime;
+exports.prune = prune;
