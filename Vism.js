@@ -101,7 +101,7 @@ String.prototype.replaceAll = function(search, replacement) {
  		})
  		.then(messages => {
  			const replyToMsg = messages.first();
- 			let color = (msg.channel.type === "DM") ? msg.guild.member(replyToMsg.author).highestRole.color : 0x1b5fe8;
+ 			let color = (msg.channel.type !== "DM") ? msg.guild.member(replyToMsg.author).highestRole.color : 0x1b5fe8;
  			msg.channel.sendMessage(`${getlongstring}`, {
  				embed: {
  					color: color,
@@ -125,7 +125,7 @@ String.prototype.replaceAll = function(search, replacement) {
  			})
  			.then(messages => {
  				const replyToMsg = messages.first();
- 				let color = (msg.channel.type === "DM") ? msg.guild.member(replyToMsg.author).highestRole.color : 0x1b5fe8;
+ 				let color = (msg.channel.type !== "DM") ? msg.guild.member(replyToMsg.author).highestRole.color : 0x1b5fe8;
  				msg.channel.sendMessage(`${replyToMsg.author}, ${getlongstring}`, {
  					embed: {
  						color: color,
