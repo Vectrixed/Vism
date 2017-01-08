@@ -1,7 +1,7 @@
 module.exports = {
     help: 'list internet rules',
     func: (client, message, args) => {
-      let rules = require('../util/intrules.json')
+      let rules = client.modules.rules
         let rule = args[0];
         if (!isNaN(rule)) {
             message.edit(`\`\`\`\nRule ${rule}. ${rules[rule]}\n\`\`\``);

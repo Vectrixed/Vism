@@ -12,7 +12,7 @@ client.token = client.config.token;
 client.modules = {
   fs: require('fs'),
   translate: require('google-translate-api'),
-  rules: require('./requires/intrules.json'),
+  rules: require('./util/intrules.json'),
   urban: require('urban')
 }
 let commandsList = client.modules.fs.readdirSync('./commands/'); // return an array of all the files and folders inside the commands folder
