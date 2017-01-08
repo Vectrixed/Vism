@@ -59,5 +59,12 @@ client.on('message', message => {
         }
     }
 })
-
+/*   	atr = [
+ 		["acow", "https://gyazo.com/c8b1e9298be58f164a9e2445d584ecf9"],
+ 		["dbad", "https://gyazo.com/ac368304fb2cb65bb9ced110d147f2dd"],
+ 		["sheli", "https://www.youtube.com/watch?v=WPMDCJrRpT8"],
+ 		["y-you too", "https://www.youtube.com/watch?v=twkGJY_JxLE"],
+ 		["angery", "https://gyazo.com/76a38abe1b67e14ab8428aa41364235b"],
+ 		['kk', 'https://gyazo.com/60dc3b513937fae28b02fc9040175fe7']
+ 	];*/
 client.login(client.token);
