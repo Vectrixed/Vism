@@ -13,8 +13,10 @@ client.modules = {
   fs: require('fs'),
   translate: require('google-translate-api'),
   rules: require('./util/intrules.json'),
-  urban: require('urban')
+  urban: require('urban'),
+  util: require('util')
 }
+client.client = client;
 let commandsList = client.modules.fs.readdirSync('./commands/'); // return an array of all the files and folders inside the commands folder
 client.commands = {}; // initiate value for the command list of client
 for (i = 0; i < commandsList.length; i++) {

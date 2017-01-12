@@ -9,7 +9,7 @@ let getlongstring = message.content.split(" ");
  		})
  		.then(messages => {
  			const replyToMsg = messages.first();
- 			let color = (message.channel.type !== "DM") ? message.guild.member(replyToMsg.author).highestRole.color : 0x1b5fe8;
+ 			let color = (message.channel.type !== "DM" && message.guild && message.guild.member(replyToMsg.author)) ? message.guild.member(replyToMsg.author).highestRole.color : 0x1b5fe8;
  			message.channel.sendMessage(`${getlongstring}`, {
  				embed: {
  					color: color,

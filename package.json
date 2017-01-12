@@ -12,6 +12,7 @@
     "roblox-js": "^2.2.4",
     "runescape-api": "^1.0.9",
     "urban": "^0.3.1",
+    "util": "^0.10.3",
     "uws": "^0.12.0"
   },
   "devDependencies": {},
