@@ -1,0 +1,13 @@
+#include <iostream>
+#include <string>
+#include <sstream>
+#include <cstdint>
+
+using namespace std;
+
+${beforeMain}
+
+int main() {
+    ${inMain}
+    return 0;
+}
