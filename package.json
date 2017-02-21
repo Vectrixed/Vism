@@ -17,7 +17,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "pm2 start Vism.js --name selfbot --watch",
+    "start": "pm2 start Vism.js --name selfbot",
     "stop": "pm2 stop selfbot && pm2 delete selfbot"
   },
   "keywords": [

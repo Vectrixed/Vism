@@ -26,28 +26,10 @@ for (i = 0; i < commandsList.length; i++) {
         client.commands[item.slice(0, -3)] = require(`./commands/${item}`); // and put the require inside the client.commands object
     }
 }
-client.load = (command) => {
-    let commandsList = client.modules.fs.readdirSync('./commands/');
-    if (command) {
-        if (commandsList.indexOf(`${command}`) >= 0) {
-            delete require.cache[require.resolve(`./commands/${command}`)];
-            client.commands[command] = require(`./commands/${command}`);
-        }
-    } else {
-        client.commands = {};
-        for (i = 0; i < commandsList.length; i++) {
-            let item = commandsList[i];
-            if (item.match(/\.js$/)) {
-                delete require.cache[require.resolve(`./commands/${item}`)];
-                client.commands[item.slice(0, -3)] = require(`./commands/${item}`);
-            }
-        }
-    }
-}
-client.load();
+
 client.on('ready', () => {
   console.log("Bot is on")
-  client.user.setStatus("dnd");
+  client.user.setStatus("invisible");
 })
 
 client.on('message', message => {
