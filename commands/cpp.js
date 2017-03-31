@@ -1,15 +1,15 @@
 module.exports = {
-    help: 'Evals c++',
-    func: (client, message, args) => {
+  help: 'Evals c++',
+  func: (client, message, args) => {
     const {
-      exec
-    } = require('child_process');
+      exec,
+      } = require('child_process');
     const fs = require('fs');
 
     const fileTemplate = fs.readFileSync('./main.cpp.template', 'utf8');
-    let input = message.content.split(" ");
+    let input = message.content.split(' ');
     input.shift();
-    input = input.join(" ")
+    input = input.join(' ');
 
     const [inMain, beforeMain] = input.split(/\/\* ?-+ ?\*\//).reverse();
 
@@ -18,7 +18,7 @@ module.exports = {
         return message.edit(`\`Input\`\n\`\`\`cpp\n${input}\n\`\`\`\`Error\`\n\`\`\`cpp\n${error.message}\n\`\`\``).catch(console.error);
       }
 
-      exec('g++ main.cpp -o output', (error, stdout) => {
+      exec('g++ -std=c++11 main.cpp -o output', (error, stdout) => {
         if (error) {
           return message.edit(`\`Input\`\n\`\`\`cpp\n${input}\n\`\`\`\`Error\`\n\`\`\`cpp\n${error.message}\n\`\`\``).catch(console.error);
         }
